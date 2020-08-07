@@ -3,7 +3,7 @@
     width: 80%;
     margin: -150px auto 100px auto;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 150px);
+    grid-template-rows: repeat(5, 130px);
     grid-gap: 20px;
     grid-template-areas: "facebook twitter instagram youtube" "facebook twitter instagram youtube" "overview overview overview overview";
 }

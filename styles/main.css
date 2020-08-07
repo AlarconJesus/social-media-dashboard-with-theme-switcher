@@ -17,6 +17,8 @@
 body {
     font-family: "inter";
     background: hsl(0, 0%, 100%);
+    color: hsl(228, 12%, 44%);
+    transition: .3s ease all;
 }
 
 header {
@@ -27,6 +29,10 @@ header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+}
+
+header h1 {
+    color: hsl(230, 17%, 14%);
 }
 
 .light-dark {
@@ -56,11 +62,57 @@ header {
     background: #fff;
     position: absolute;
     top: 0;
+    transition: .3s ease all;
     left: 30px;
+}
+
+#switch-mode:active {
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+#switch-mode.active {
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+#switch-mode.active::before {
+    left: 0px;
 }
 
 .social-card {
     background: hsl(227, 47%, 96%);
     border-radius: 5px;
     padding: 20px;
+}
+
+.social-card span {
+    font-weight: bold;
+    font-size: 30px;
+    color: hsl(230, 17%, 14%);
+}
+
+body.dark {
+    background: hsl(230, 17%, 14%);
+    color: hsl(228, 34%, 66%);
+}
+
+body.dark header {
+    background: hsl(232, 19%, 15%);
+    color: hsl(0, 0%, 100%);
+}
+
+body.dark header h1 {
+    color: hsl(0, 0%, 100%);
+}
+
+body.dark .title span {
+    color: hsl(228, 34%, 66%);
+}
+
+body.dark .social-card {
+    background: hsl(228, 28%, 20%);
+}
+
+body.dark .social-card span,
+body.dark h2 {
+    color: hsl(0, 0%, 100%);
 }
