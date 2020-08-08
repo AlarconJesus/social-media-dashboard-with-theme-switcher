@@ -46,7 +46,7 @@
     .main {
         margin-top: -50px;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(10, 130px);
+        grid-template-rows: repeat(9, 130px);
         grid-template-areas: "facebook twitter""facebook twitter""instagram youtube""instagram youtube""overview overview";
     }
 }
@@ -57,7 +57,7 @@
     }
     .main {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(18, 130px);
+        grid-template-rows: repeat(17, 130px);
         grid-template-areas: "facebook" "facebook" "twitter" "twitter" "instagram" "instagram" "youtube" "youtube" "overview";
     }
 }
