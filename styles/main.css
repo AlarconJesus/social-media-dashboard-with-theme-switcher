@@ -42,6 +42,9 @@ header h1 {
     justify-content: space-around;
 }
 
+
+/* Estilos boton de switch| Button Switch Styles */
+
 #switch-mode {
     width: 60px;
     height: 30px;
@@ -70,25 +73,165 @@ header h1 {
     background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
-#switch-mode.active {
+#switch-mode.actived {
     background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
-#switch-mode.active::before {
+#switch-mode.actived::before {
     left: 0px;
+    background: hsl(232, 19%, 15%);
 }
+
+
+/*Estilos Tarjetas de redes sociales Principales | Social Main Cards Styles*/
 
 .social-card {
     background: hsl(227, 47%, 96%);
     border-radius: 5px;
     padding: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.social-card span {
+.social-card .number {
+    font-weight: bold;
+    font-size: 60px;
+    color: hsl(230, 17%, 14%);
+}
+
+.social-card .contact {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.social-card .contact img {
+    margin-right: 5px;
+}
+
+.social-card .follower {
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.facebook::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: hsl(208, 92%, 53%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.twitter::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: hsl(203, 89%, 53%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.instagram::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.youtube::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: hsl(348, 97%, 39%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+span.stats-up {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: hsl(163, 72%, 41%);
+}
+
+span.stats-up img,
+span.stats-down img {
+    margin-right: 5px;
+}
+
+span.stats-down {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: hsl(356, 69%, 56%);
+}
+
+h2 {
+    line-height: 180px;
+}
+
+
+/*Estilos informacion de redes sociales*/
+
+.social-card-review {
+    background: hsl(227, 47%, 96%);
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.social-card-review .number {
+    margin-top: 33px;
     font-weight: bold;
     font-size: 30px;
     color: hsl(230, 17%, 14%);
 }
+
+.social-card-review .stats-up,
+.social-card-review .stats-down {
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.social-card-review>img {
+    width: 20px;
+    height: 20px;
+    justify-items: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.social-card-review:active,
+.social-card:active {
+    background-color: hsl(225, 11%, 86%);
+}
+
+
+/*Estilos Modo Oscuro | Dark mode styles*/
 
 body.dark {
     background: hsl(230, 17%, 14%);
@@ -108,11 +251,26 @@ body.dark .title span {
     color: hsl(228, 34%, 66%);
 }
 
-body.dark .social-card {
+body.dark .social-card,
+body.dark .social-card-review {
     background: hsl(228, 28%, 20%);
 }
 
-body.dark .social-card span,
+body.dark .social-card .number,
 body.dark h2 {
     color: hsl(0, 0%, 100%);
+}
+
+body.dark .social-card-review {
+    background: hsl(228, 28%, 20%);
+}
+
+body.dark .social-card-review .number,
+body.dark h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+body.dark .social-card-review:active,
+body.dark .social-card:active {
+    background-color: hsl(229, 21%, 25%);
 }
