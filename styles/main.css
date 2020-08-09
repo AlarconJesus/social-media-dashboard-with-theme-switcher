@@ -218,8 +218,7 @@ h2 {
 .social-card-review>img {
     width: 20px;
     height: 20px;
-    justify-items: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
     position: absolute;
     right: 20px;
     top: 20px;
@@ -257,17 +256,13 @@ body.dark .social-card-review {
 }
 
 body.dark .social-card .number,
+body.dark .social-card-review .number,
 body.dark h2 {
     color: hsl(0, 0%, 100%);
 }
 
 body.dark .social-card-review {
     background: hsl(228, 28%, 20%);
-}
-
-body.dark .social-card-review .number,
-body.dark h2 {
-    color: hsl(0, 0%, 100%);
 }
 
 body.dark .social-card-review:active,
